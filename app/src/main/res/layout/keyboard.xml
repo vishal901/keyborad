@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res"
+    android:id="@+id/listValue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:keyBackground="@drawable/key_background"
+        android:keyPreviewLayout="@layout/preview"
+        android:keyTextColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/footer_for_emoticons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <com.astuetz.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="#EDEDED"
+               />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:background="#EDEDED"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_back_arrow_icon" />
+
+                    <!--<ImageButton-->
+                    <!--android:id="@+id/btn_abc_keypad"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:paddingLeft="15dp"-->
+                    <!--android:paddingRight="15dp"-->
+                    <!--android:scaleType="fitCenter"-->
+                    <!--android:src="@drawable/e00a" />-->
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/divider_color" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_dark" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/emojiKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#EDEDED">
+
+        </android.support.v4.view.ViewPager>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_dark" />
+
+        <LinearLayout
+            android:background="#EDEDED"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_keypad_main"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_keybord_icon1" />
+
+            <ImageView
+                android:id="@+id/img_keypad_space"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+
+                android:background="@drawable/btn_background"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/spacebar" />
+
+            <ImageView
+                android:id="@+id/img_keypad_main1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background"
+                android:paddingLeft="15dp"
+
+                android:paddingRight="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_keybord_icon1" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@android:color/holo_red_dark" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
